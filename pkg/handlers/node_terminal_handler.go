@@ -97,6 +97,7 @@ func (h *NodeTerminalHandler) createNodeAgent(ctx context.Context, cs *cluster.C
 		truncateNodeName = nodeName[:maxLength]
 	}
 	podName := fmt.Sprintf("%s-%s-%s", common.NodeTerminalPodName, truncateNodeName, utils.RandomString(5))
+	//pod
 
 	// Define the kite node agent pod spec
 	pod := &corev1.Pod{
